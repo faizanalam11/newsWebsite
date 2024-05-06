@@ -8,7 +8,7 @@ const Navbar = ({data, filteredData, setFilteredData}) => {
     const [searchText, setSearchText] = useState("");
     return (
         <div className="flex justify-around items-center bg-cyan-600 p-2">
-            <h1 className="text-lg font-bold text-neutral-700">News Maniac</h1>
+            <h1 className="text-lg font-bold text-neutral-700 z-50">News Maniac</h1>
             <ul className="flex text-gray-200 gap-4">
                 {
                     navLinks.map(({id, title, link}) => (
