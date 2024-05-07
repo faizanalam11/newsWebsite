@@ -8,7 +8,6 @@ import { apiKey } from "./utils/constants";
 import Footer from "./components/Footer";
 
 const AppLayout = () => {
-    const [ data, setData ] = useState(null);
     const [ filteredData, setFilteredData ] = useState(null);
     const [ query, setQuery ] = useState("latest");
 
@@ -21,7 +20,6 @@ const AppLayout = () => {
             const newsData = await fetch(`${url}${query}&apiKey=${apiKey}`);
             const jsonNews = await newsData.json();
             console.log(jsonNews);
-            setData(jsonNews?.articles);
             setFilteredData(jsonNews?.articles);
         }
         catch(error){
@@ -32,7 +30,7 @@ const AppLayout = () => {
     return (
         <>
             <Navbar setQuery={setQuery}/>
-            <Body data={data} filteredData={filteredData}/>
+            <Body filteredData={filteredData}/>
             <Footer/>
         </>
     )
