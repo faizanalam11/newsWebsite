@@ -1,6 +1,8 @@
 export const url = "https://newsapi.org/v2/everything?q=";
 export const apiKey = "48ad30ab58344b6b80e2223d4a1d7203";
 
+export const linkedIn_URL = "https://www.linkedin.com/in/faizanalam123/";
+
 export const navLinks = [
     {
         id: 101,

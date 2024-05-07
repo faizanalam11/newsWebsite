@@ -4,15 +4,17 @@ import { navLinks } from "../utils/constants";
 import { filterNews } from "../utils/filterNews";
 import { useState } from "react";
 
-const Navbar = ({data, filteredData, setFilteredData}) => {
+const Navbar = ({data, filteredData, setFilteredData, setQuery}) => {
     const [searchText, setSearchText] = useState("");
     return (
-        <div className="flex justify-around items-center bg-cyan-600 p-2">
-            <h1 className="text-lg font-bold text-neutral-700 z-50">News Maniac</h1>
-            <ul className="flex text-gray-200 gap-4">
+        <div className="flex justify-around items-center bg-cyan-600 p-2 flex-wrap">
+            <h1 className="xl:text-2xl lg:text-xl md:text-lg sm:text-base text-sm font-bold text-neutral-700 z-50">News Maniac</h1>
+            <ul className="flex text-gray-300 font-semibold gap-4">
                 {
                     navLinks.map(({id, title, link}) => (
-                        <li className="p-1 md:m-1 m-0 tracking-wide cursor-pointer text-lg hover:text-white duration-300" key={id}>
+                        <li className="p-1 md:m-1 m-0 tracking-wide cursor-pointer text-lg hover:text-white duration-300" key={id} onClick={() => {
+                            setQuery(link);
+                        }}>
                             {title}
                         </li>
                     ))

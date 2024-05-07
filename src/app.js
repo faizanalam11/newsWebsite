@@ -5,14 +5,16 @@ import Body from "./components/Body";
 import { useState, useEffect } from "react";
 import { url } from "./utils/constants";
 import { apiKey } from "./utils/constants";
+import Footer from "./components/Footer";
 
 const AppLayout = () => {
     const [ data, setData ] = useState(null);
     const [ filteredData, setFilteredData ] = useState(null);
+    const [ query, setQuery ] = useState("IPL");
 
     useEffect(() => {
-        getNewsData("IPL");
-    },[]);
+        getNewsData(`${query}`);
+    },[query]);
 
     async function getNewsData(query) {
         try{
@@ -29,8 +31,9 @@ const AppLayout = () => {
 
     return (
         <>
-            <Navbar data={data} setFilteredData={setFilteredData}/>
+            <Navbar data={data} setFilteredData={setFilteredData} setQuery={setQuery}/>
             <Body data={data} filteredData={filteredData}/>
+            <Footer/>
         </>
     )
 }
