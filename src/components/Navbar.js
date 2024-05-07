@@ -23,7 +23,10 @@ const Navbar = ({setQuery}) => {
             <div className="flex focus:border-cyan-600">
                 <input type="text" placeholder="Search" className="p-1 rounded-l-md" value={searchText} onChange={(e) => setSearchText(e.target.value)} onKeyDown={(event) => {
                             if(event.key === 'Enter'){
-                                setQuery(searchText);
+                                if(searchText === ''){
+                                    setQuery("latest");
+                                }
+                                else setQuery(searchText);
                             }
                         }}/>
                 <button className="bg-white rounded-r-md p-1" onClick={() => {
