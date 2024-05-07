@@ -16,7 +16,7 @@ const NewsCard = ({title, source, publishedAt,description,urlToImage, url}) => {
                 <p className='text-xs font-serif p-1'>{publishedDate}</p>
             </div>
             <p className="p-1 text-xs">{description}</p>
-            <a href={url} target='_blank'><button className="bg-cyan-600 p-1 rounded-md text-white  font-semibold m-1 absolute bottom-1 left-1 z-50">Read More</button></a>
+            <a href={url} target='_blank'><button className="bg-cyan-600 p-1 rounded-md text-white  font-semibold m-1 absolute bottom-1 left-1 z-50 cursor-pointer">Read More</button></a>
         </div>
     )
 }

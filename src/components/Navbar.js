@@ -4,7 +4,7 @@ import { navLinks } from "../utils/constants";
 import { filterNews } from "../utils/filterNews";
 import { useState } from "react";
 
-const Navbar = ({data, filteredData, setFilteredData, setQuery}) => {
+const Navbar = ({setQuery}) => {
     const [searchText, setSearchText] = useState("");
     return (
         <div className="flex justify-around items-center bg-cyan-600 p-2 flex-wrap">
@@ -23,8 +23,7 @@ const Navbar = ({data, filteredData, setFilteredData, setQuery}) => {
             <div className="flex focus:border-cyan-600">
                 <input type="text" placeholder="Search" className="p-1 rounded-l-md" value={searchText} onChange={(e) => setSearchText(e.target.value)}/>
                 <button className="bg-white rounded-r-md p-1" onClick={() => {
-                    const filterednews = filterNews(searchText, data);
-                    setFilteredData(filterednews);
+                    setQuery(searchText)
                 }}><BiSearch/></button>
             </div>
         </div>

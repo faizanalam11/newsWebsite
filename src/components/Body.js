@@ -13,7 +13,7 @@ const Body = ({data, filteredData}) => {
 
     return data?.length === 0 ? ( <Shimmer/>
     ) : (
-        <div className="flex flex-wrap cursor-pointer w-5/6 justify-center items-center m-auto">
+        <div className="flex flex-wrap w-5/6 justify-center items-center m-auto">
             {
                 filteredData?.map((news) => {
                     return (

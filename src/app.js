@@ -10,7 +10,7 @@ import Footer from "./components/Footer";
 const AppLayout = () => {
     const [ data, setData ] = useState(null);
     const [ filteredData, setFilteredData ] = useState(null);
-    const [ query, setQuery ] = useState("IPL");
+    const [ query, setQuery ] = useState("latest");
 
     useEffect(() => {
         getNewsData(`${query}`);
@@ -31,7 +31,7 @@ const AppLayout = () => {
 
     return (
         <>
-            <Navbar data={data} setFilteredData={setFilteredData} setQuery={setQuery}/>
+            <Navbar setQuery={setQuery}/>
             <Body data={data} filteredData={filteredData}/>
             <Footer/>
         </>
