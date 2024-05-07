@@ -2,7 +2,7 @@
   "name": "newswebsite",
   "version": "1.0.0",
   "description": "This is a news website",
-  "main": "index.js",
+  "source": "index.html",
   "scripts": {
     "start": "parcel index.html",
     "build": "parcel build index.html",
