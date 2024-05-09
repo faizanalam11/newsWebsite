@@ -7,7 +7,7 @@ import { useState } from "react";
 const Navbar = ({setQuery}) => {
     const [searchText, setSearchText] = useState("");
     return (
-        <div className="flex justify-around items-center bg-cyan-600 p-2 flex-wrap">
+        <div className="flex justify-around items-center bg-cyan-600 p-2 flex-col md:flex-row">
             <h1 className="xl:text-2xl lg:text-xl md:text-lg sm:text-base text-sm font-bold text-neutral-700 z-50">News Maniac</h1>
             <ul className="flex text-gray-300 font-semibold gap-4">
                 {
