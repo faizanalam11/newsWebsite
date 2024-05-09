@@ -15,9 +15,9 @@ const Body = ({filteredData}) => {
     ) : (
         <div className="flex flex-wrap w-5/6 justify-center items-center m-auto">
             {
-                filteredData?.map((news) => {
+                filteredData?.map((news, index) => {
                     return (
-                        <NewsCard {...news}/>
+                        <NewsCard key={index} {...news}/>
                     )
                 })
             }

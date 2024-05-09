@@ -19,7 +19,6 @@ const AppLayout = () => {
         try{
             const newsData = await fetch(`${url}${query}&apiKey=${apiKey}`);
             const jsonNews = await newsData.json();
-            console.log(jsonNews);
             setFilteredData(jsonNews?.articles);
         }
         catch(error){
