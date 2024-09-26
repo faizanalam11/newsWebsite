@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/faizanalam11/newsWebsite#readme",
   "devDependencies": {
+    "dotenv": "^16.4.5",
     "parcel": "^2.12.0",
     "postcss": "^8.4.38",
     "process": "^0.11.10",
