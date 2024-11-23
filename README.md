@@ -47,9 +47,9 @@ Click the image above to watch the project in action on YouTube.
    ```bash
    npm start
 5. Open the application in your browser:
-  ```bash
-  http://localhost:1234
-  ```
+   ```bash
+     http://localhost:1234
+     ```
 ## **Challenges Faced**  
 One of the major challenges was creating a polished, responsive UI while optimizing for performance. Additionally, the learning curve of integrating React.js and Tailwind CSS was overcome by iterative improvements and research.
 
