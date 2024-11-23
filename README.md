@@ -18,7 +18,6 @@ The project was developed as a practical exercise to master **React.js** and **T
 ## **Tech Stack**  
 - **Frontend**: React.js  
 - **Styling**: Tailwind CSS  
-- **Deployment**: Vercel  
 
 ---
 
